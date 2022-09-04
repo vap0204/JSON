@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON CREATION</title>
+</head>
+<body>
+    <div>
+        <input type="text" id="name" placeholder="Name"> <br/>
+        <input type="number" id="age" placeholder="Age"> <br/>
+        <input type="text" id="speciality" placeholder="speciality"> <br/>
+        <button id="show">Show</button>
+     </div>
+
+     <script src="jquery.js"></script>
+     <script>
+        $(function(){
+            $('#show').click(function(){
+                let name = $('#name').val();
+                let price = parseInt ( $('#age').val() );
+                let quantity =   $('#speciality').val() ;
+                let result = {name: name, age: age, speciality: speciality};
+                console.log({name, age, speciality});
+                
+                console.log(result);
+                console.log( result.name );
+                console.log(result.age);
+                console.log(result.speciality);
+                
+            });
+        });
+     </script>
+</body>
+</html>
