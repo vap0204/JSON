@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON TRANSFER</title>
+</head>
+<body>
+   <div id="container">
+        <input type="text" id="name" placeholder="Name"><br>
+        <input type="number" id="age" placeholder="Age"><br>
+        <input type="text" id="hobby" placeholder="Hobby"><br>
+        <button id="btn"onclick="transferData()">Transfer to JSON</button>
+   </div>
+    <script src="jquery.js"></script>
+    <script>
+        function transferData(){
+            let name=$('#name').val();
+            let age=parseInt ( $('#age').val() );
+            let hobby=$('#hobby').val();
+
+            jsonObject={
+                "Name":"",
+                "Age":"",
+                "Hobby":""
+            }
+            jsonObject.Name=name;
+            jsonObject.Age=age;
+            jsonObject.Hobby=hobby;
+
+            let str=JSON.stringify(jsonObject);
+            console.log(jsonObject);
+            console.log(jsonObject.Name);
+            console.log(jsonObject.Age);
+            console.log(jsonObject.Hobby);
+        }
+    </script>
+</body>
+</html>
